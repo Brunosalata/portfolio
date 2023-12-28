@@ -1,11 +1,11 @@
 <template>
-    <v-card class="mx-auto mt-20" max-width="90%">
+    <v-card class="mx-auto mt-20 bg-transparent" elevation="0">
 
         <v-container fluid>
             <v-row dense>
                 <v-col v-for="card in cards" :key="card.title" :cols="card.flex" sm="6" md="6" lg="6" xl="6" xxl="6">
                     <v-hover v-slot="{ isHovering, props }">
-                        <v-card id="v-card-skill" :elevation="isHovering ? 12 : 0" :class="{ 'on-hover': isHovering }"
+                        <v-card id="v-card-skill" :elevation="isHovering ? 12 : 2" :class="{ 'on-hover': isHovering }"
                             v-bind="props">
                             <v-img :src="card.src" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)" cover>
                                 <div style="height: 100%;">
