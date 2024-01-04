@@ -1,6 +1,5 @@
 <template>
-    <h1 class="mb-2 text-md-h3">Client Area</h1>
-    <DeviceTable />
+    <div></div>
 </template>
 
 <script setup>

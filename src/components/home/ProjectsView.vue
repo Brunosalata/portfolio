@@ -15,16 +15,15 @@
                 :key="project.id"
                 cols="12" sm="6" md="4" lg="3"
               >
-              <v-card height="500">  
+              <v-card height="auto" elevation="0">  
                 <v-img
                     :src="project.img"
                     :lazy-src="`https://picsum.photos/10/6?image=${project.src}`"
-                    aspect-ratio="1"
                     cover
                   ></v-img>
                   <v-card-title>{{ project.title }}</v-card-title>
                   <v-card-subtitle>{{ project.subtitle }}</v-card-subtitle>
-                  <v-card-text>{{ project.text }}</v-card-text>
+                  <v-card-text height="200" style="overflow-y: auto;">{{ project.text }}</v-card-text>
                 </v-card>
               </v-col>
             </v-row>
@@ -43,6 +42,7 @@
   import SelfEmployedProj from '@/assets/img/selfEmployed-project.jpg';
   import singlePageWeb from '@/assets/img/singlePageWeb.jpg';
   import multiPageWeb from '@/assets/img/multiPageWeb.png';
+  import landingPageWeb from '@/assets/img/landingPageWeb.png';
   
   export default {
     data: () => ({
@@ -53,66 +53,74 @@
           id: 1,
           category: 1,
           img: GymProj,
-          title: "Title",
-          subtitle: "Subtitle",
-          text: "Text"
+          title: "Academias",
+          subtitle: "Sistema de Gestão",
+          text: "Software de gestão completo para controle de matrículas, treinos e finanças, facilitando a administração do seu negócio fitness."
         },
         {
           id: 2,
           category: 1,
           img: CoffeeShopProj,
-          title: "Title",
-          subtitle: "Subtitle",
-          text: "Text"
+          title: "Cafeterias",
+          subtitle: "Sistema de Gestão",
+          text: "Gerencie pedidos, estoque e vendas com facilidade. Controle tudo em um único sistema para simplificar sua cafeteria."
         },
         {
           id: 3,
           category: 1,
           img: HospitalProj,
-          title: "Title",
-          subtitle: "Subtitle",
-          text: "Text"
+          title: "Clínicas",
+          subtitle: "Sistema de Gestão",
+          text: "Simplifique agendamentos, prontuários e faturamentos. Otimize a gestão para proporcionar melhor atendimento."
         },
         {
           id: 4,
           category: 1,
           img: FinanceProj,
-          title: "Title",
-          subtitle: "Subtitle",
-          text: "Text"
+          title: "Finanças",
+          subtitle: "Sistema de Financeiro",
+          text: "Ferramenta intuitiva para monitorar gastos, receitas e fluxo de caixa, garantindo uma gestão financeira eficiente."
         },
         {
           id: 5,
           category: 1,
           img: UniversityProj,
-          title: "Title",
-          subtitle: "Subtitle",
-          text: "Text"
+          title: "Escolas",
+          subtitle: "Sistema de Gestão",
+          text: "Administre alunos, notas, horários e pagamentos de forma eficaz. Uma solução completa para gestão educacional."
         },
         {
           id: 6,
           category: 1,
           img: SelfEmployedProj,
-          title: "Title",
-          subtitle: "Subtitle",
-          text: "Text"
+          title: "Autônomos",
+          subtitle: "Sistema de Gestão",
+          text: "Controle seus projetos, clientes e finanças de forma prática. Organize-se e cresça como profissional independente."
         },
         // Web Projects
         {
           id: 7,
           category: 2,
           img: singlePageWeb,
-          title: "Single Page Website",
-          subtitle: "Subtitle",
-          text: "Em um site de uma página, todas as informações são apresentadas em uma única página, de modo que os links de navegação servem como âncoras para diferentes seções da página. Esse layout significa que sites de uma página geralmente têm rolagem suave e efeitos de paralaxe, o que lhes dá uma sensação envolvente."
+          title: "Web Design Simplificado",
+          subtitle: "Presença online intuitiva e dinâmica.",
+          text: "Desenvolvimento ágil de websites dinâmicos, informativos e interativos, oferecendo uma experiência fluida para seus visitantes em uma única página."
         },
         {
           id: 8,
           category: 2,
           img: multiPageWeb,
-          title: "Multi Page Website",
-          subtitle: "Subtitle",
-          text: "Um site de várias páginas contém várias páginas e subpáginas em um menu. Ao contrário do site de página única, a única maneira de navegar e visualizar páginas em design de várias páginas é clicar nos links do menu, seja ele lateral ou no topo da página."
+          title: "Websites Versáteis",
+          subtitle: "Presença completa e estruturada online.",
+          text: "Criação de websites robustos e completos, com navegação clara e conteúdo estruturado em várias páginas para atender às necessidades específicas do seu negócio."
+        },
+        {
+          id: 9,
+          category: 2,
+          img: landingPageWeb,
+          title: "Landing Pages para Conversões",
+          subtitle: "Página otimizada para destacar suas ofertas.",
+          text: "Página direcionada para conversão, projetada para destacar uma oferta ou serviço, maximizando a conversão de visitantes em leads ou clientes."
         },
       ],
     }),
@@ -127,3 +135,9 @@
     }
   };
   </script>
+
+<style scoped>
+.v-img{
+  border-radius: 1%;
+}
+</style>
