@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/no-v-text-v-html-on-component -->
 <template>
-  <v-app class="overflow-hidden">
+  <v-app class="app">
     <v-app-bar color="transparent" style="top: 0px; transform: translateY(0px); z-index: 100;">
       <template v-slot:image>
         <v-img gradient="to top right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)"></v-img>
