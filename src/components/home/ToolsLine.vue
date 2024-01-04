@@ -4,9 +4,9 @@
 
             <v-carousel v-model="models[n - 1]" cycle hide-delimiters :show-arrows="false" v-slot="{ selectedClass }"
                 :interval="2000" height="150">
-                <v-carousel-item v-for="(tool, i) in tools" :class="['ma-0 pa-0', selectedClass]" :key="i">
+                <v-carousel-item v-for="(tool, i) in tools" :class="['ma-0 pa-0', selectedClass]" :key="i" max-height="120">
                     <v-img :src="i === models[n - 1] % tools.length ? tool.initialImage : tool.src"
-                        @click="redirectTo(tool.href)" style="height: 75%;" class="mt-3" content></v-img>
+                        @click="redirectTo(tool.href)" style="height: 50%;" class="fill-height d-flex justify-center align-center" ></v-img>
                 </v-carousel-item>
             </v-carousel>
 
@@ -20,32 +20,32 @@ export default {
         return {
             tools: [
                 {
-                    initialImage: 'https://www.cdnlogo.com/logos/v/92/vue-js.svg',
+                    initialImage: 'https://www.cdnlogo.com/logos/v/23/vitejs.svg',
                     src: 'https://www.cdnlogo.com/logos/v/92/vue-js.svg',
                     href: 'https://google.com.br'
                 },
                 {
-                    initialImage: 'https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-light-atom.svg',
+                    initialImage: 'https://www.cdnlogo.com/logos/s/91/spring.svg',
                     src: 'https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-light-atom.svg',
                     href: 'https://vuetifyjs.com/'
                 },
                 {
-                    initialImage: 'https://www.cdnlogo.com/logos/j/2/java.svg',
+                    initialImage: 'https://www.cdnlogo.com/logos/v/92/vue-js.svg',
                     src: 'https://www.cdnlogo.com/logos/j/2/java.svg',
                     href: 'https://www.java.com/pt-BR/'
                 },
                 {
-                    initialImage: 'https://www.cdnlogo.com/logos/s/41/sqlite.svg',
+                    initialImage: 'https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-light-atom.svg',
                     src: 'https://www.cdnlogo.com/logos/s/41/sqlite.svg',
                     href: 'https://google4.com.br'
                 },
                 {
-                    initialImage: 'https://www.cdnlogo.com/logos/v/23/vitejs.svg',
+                    initialImage: 'https://www.cdnlogo.com/logos/j/2/java.svg',
                     src: 'https://www.cdnlogo.com/logos/v/23/vitejs.svg',
                     href: 'https://vitejs.dev/'
                 },
                 {
-                    initialImage: 'https://www.cdnlogo.com/logos/s/91/spring.svg',
+                    initialImage: 'https://www.cdnlogo.com/logos/s/41/sqlite.svg',
                     src: 'https://www.cdnlogo.com/logos/s/91/spring.svg',
                     href: 'https://google6.com.br'
                 },
@@ -60,20 +60,3 @@ export default {
     }
 };
 </script>
-
-<style scoped>
-.v-img {
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-}
-
-.v-carousel-item {
-    margin: 0;
-    border-radius: 50%;
-}
-
-.v-carousel-item .hover {
-    scale: 1.02;
-}
-</style>

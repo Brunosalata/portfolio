@@ -25,38 +25,28 @@ const routes = [
     ],
   },
   {
-    path: '/client',
+    path: '/contact',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
         path: '',
-        name: 'Client',
-        component: () => import('@/views/Client.vue'),
+        name: 'Contact',
+        component: () => import('@/views/Contact.vue'),
       },
     ],
   },
   {
-    path: '/dashboard',
+    path: '/projects',
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
         path: '',
-        name: 'Dashboard',
-        component: () => import('@/views/Dashboard.vue'),
+        name: 'Projects',
+        component: () => import('@/views/Projects.vue'),
       },
     ],
   },
-  {
-    path: '/report',
-    component: () => import('@/layouts/default/Default.vue'),
-    children: [
-      {
-        path: '',
-        name: 'Report',
-        component: () => import('@/views/Report.vue'),
-      },
-    ],
-  },
+  
 ]
 
 const router = createRouter({

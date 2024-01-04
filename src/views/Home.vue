@@ -19,7 +19,7 @@
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
     <div class="d-flex flex-column fill-height justify-center align-center text-white">
       <h1 class="text-h4 font-weight-thin mb-4">
-        Atributos
+        Qualidade
       </h1>
       <h4 class="subheading">
         Porque se desenvolver com a gente
@@ -40,31 +40,42 @@
       <h1 class="text-h4 font-weight-thin mb-4">
         Tecnologias
       </h1>
-      <h4 class="subheading">
-        As mais atuais e poderosas ferrametnas do mercado
+      <h4 class="subheading" style="text-align: center;">
+        As mais atuais e poderosas ferramentas do mercado
       </h4>
     </div>
   </v-parallax>
   <div class="bg-white">
     <ToolsLine />
   </div>
+  <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
+    <div class="d-flex flex-column fill-height justify-center align-center text-white">
+      <h1 class="text-h4 font-weight-thin mb-4">
+        Projetos
+      </h1>
+      <h4 class="subheading" style="text-align: center;">
+        Personalizados e com foco no usuário
+      </h4>
+    </div>
+  </v-parallax>
 
   <div class="bg-grey-darken-4 d-flex justify-center align-center">
-    <div style="padding-bottom: 80px; width: 90%;">
-      <div class="pt-15 pb-15">
-        <ProjectsView />
+    <div style="padding-top: 80px; width: 90%;">
+      <div class="pt-0 pb-15">
+        <RecentProjects />
       </div>
+      <v-divider></v-divider>
+      
     </div>
   </div>
-  <SlideGroup />
 </template>
 
 <script lang="ts" setup>
 import Banner from '@/components/home/Banner.vue';
 import Brands from '@/components/home/Brands.vue';
-import SlideGroup from '@/components/home/SlideGroup.vue';
 import Description from '@/components/home/Description.vue';
 import Skills from '@/components/home/Skills.vue';
 import ToolsLine from '@/components/home/ToolsLine.vue';
-import ProjectsView from '@/components/home/ProjectsView.vue';
+import RecentProjects from '@/components/home/RecentProjects.vue';
+
 </script>
