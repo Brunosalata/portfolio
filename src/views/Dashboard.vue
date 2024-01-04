@@ -6,6 +6,5 @@
 </template>
 
 <script setup>
-    import TodoList from '@/components/dashboard/TodoList.vue';
-    import DatePicker from '@/components/dashboard/DatePicker.vue';
+
 </script>
