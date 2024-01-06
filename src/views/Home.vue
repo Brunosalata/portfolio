@@ -11,10 +11,7 @@
     </div>
       <Brands />
     </div>
-    <v-divider></v-divider>
-    <div class="pt-10">
-      <Description />
-    </div>
+ 
   </div>
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
     <div class="d-flex flex-column fill-height justify-center align-center text-white">
@@ -45,7 +42,7 @@
       </h4>
     </div>
   </v-parallax>
-  <div class="bg-white">
+  <div class="pl-5 pr-5 bg-white">
     <ToolsLine />
   </div>
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
@@ -64,18 +61,17 @@
       <div class="pt-0 pb-15">
         <RecentProjects />
       </div>
-      <v-divider></v-divider>
-      
     </div>
   </div>
+
+<CallAction />
 </template>
 
 <script lang="ts" setup>
 import Banner from '@/components/home/Banner.vue';
 import Brands from '@/components/home/Brands.vue';
-import Description from '@/components/home/Description.vue';
 import Skills from '@/components/home/Skills.vue';
 import ToolsLine from '@/components/home/ToolsLine.vue';
 import RecentProjects from '@/components/home/RecentProjects.vue';
-
+import CallAction from '@/components/home/CallAction.vue';
 </script>

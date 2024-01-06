@@ -13,7 +13,7 @@
           </v-card-subtitle>
   
           <v-card-actions>
-            <v-btn color="orange lighten-2" variant="text">
+            <v-btn color="primary lighten-2" variant="text">
               Detalhes
             </v-btn>
   

@@ -1,18 +1,20 @@
 <template>
     <v-row class="fill-height d-flex justify-center align-center">
-        <v-col v-for="n in 5" :key="n" cols="2">
-
-            <v-carousel v-model="models[n - 1]" cycle hide-delimiters :show-arrows="false" v-slot="{ selectedClass }"
-                :interval="2000" height="150">
-                <v-carousel-item v-for="(tool, i) in tools" :class="['ma-0 pa-0', selectedClass]" :key="i" max-height="120">
-                    <v-img :src="i === models[n - 1] % tools.length ? tool.initialImage : tool.src"
-                        @click="redirectTo(tool.href)" style="height: 50%;" class="fill-height d-flex justify-center align-center" ></v-img>
-                </v-carousel-item>
-            </v-carousel>
-
-        </v-col>
+      <v-col v-for="n in 3" :key="n" cols="4">
+        <v-carousel v-model="models[n - 1]" cycle hide-delimiters :show-arrows="false"
+                    :interval="2000" height="150">
+          <v-carousel-item v-for="(tool, i) in tools" :key="i" max-height="auto"
+                           class="d-flex justify-center align-center">
+            <div class="center-image">
+              <v-img :src="i === models[n - 1] % tools.length ? tool.initialImage : tool.src"
+                     @click="redirectTo(tool.href)"  style="max-height: 70%;"
+              ></v-img>
+            </div>
+          </v-carousel-item>
+        </v-carousel>
+      </v-col>
     </v-row>
-</template>
+  </template>
 
 <script>
 export default {
@@ -20,34 +22,34 @@ export default {
         return {
             tools: [
                 {
-                    initialImage: 'https://www.cdnlogo.com/logos/v/23/vitejs.svg',
+                    initialImage: 'https://www.cdnlogo.com/logos/j/2/java.svg',
                     src: 'https://www.cdnlogo.com/logos/v/92/vue-js.svg',
-                    href: 'https://google.com.br'
+                    href: 'https://www.java.com/pt-BR/'
+                },
+                {
+                    initialImage: 'https://www.cdnlogo.com/logos/v/23/vitejs.svg',
+                    src: 'https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-light-atom.svg',
+                    href: 'https://vitejs.dev/'
                 },
                 {
                     initialImage: 'https://www.cdnlogo.com/logos/s/91/spring.svg',
-                    src: 'https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-light-atom.svg',
-                    href: 'https://vuetifyjs.com/'
+                    src: 'https://www.cdnlogo.com/logos/s/41/sqlite.svg',
+                    href: 'https://spring.io/'
                 },
                 {
                     initialImage: 'https://www.cdnlogo.com/logos/v/92/vue-js.svg',
                     src: 'https://www.cdnlogo.com/logos/j/2/java.svg',
-                    href: 'https://www.java.com/pt-BR/'
+                    href: 'https://vuejs.org/'
                 },
                 {
                     initialImage: 'https://cdn.vuetifyjs.com/docs/images/logos/vuetify-logo-light-atom.svg',
-                    src: 'https://www.cdnlogo.com/logos/s/41/sqlite.svg',
-                    href: 'https://google4.com.br'
-                },
-                {
-                    initialImage: 'https://www.cdnlogo.com/logos/j/2/java.svg',
                     src: 'https://www.cdnlogo.com/logos/v/23/vitejs.svg',
-                    href: 'https://vitejs.dev/'
+                    href: 'https://vuetifyjs.com/'
                 },
                 {
                     initialImage: 'https://www.cdnlogo.com/logos/s/41/sqlite.svg',
                     src: 'https://www.cdnlogo.com/logos/s/91/spring.svg',
-                    href: 'https://google6.com.br'
+                    href: 'https://www.sqlite.org/index.html'
                 },
             ],
             models: [0, 1, 2, 3, 4] // Um modelo diferente para cada coluna
@@ -60,3 +62,13 @@ export default {
     }
 };
 </script>
+
+<style scoped>
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Adicione essa propriedade para garantir a centralização */
+  height: 100%;
+}
+</style>

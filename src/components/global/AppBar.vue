@@ -1,18 +1,12 @@
 <template>
-    <v-app-bar color="transparent" style="top: 0px; transform: translateY(0px); z-index: 100;">
+    <v-app-bar class="pl-15" color="transparent" style="top: 0px; transform: translateY(0px);">
       <template v-slot:image>
-        <v-img gradient="to top right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)"></v-img>
+        <v-img gradient="to top right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)"></v-img>
       </template>
 
-      <template #prepend>
-        <v-img class="ml-2">
-          <!--
-            <v-avatar image="@/assets/app-logo.png"></v-avatar>
-          -->
-        </v-img>
-      </template>
 
-      <v-img class="d-flex justify-center align-center" height="45" src="@/assets/img/fuzay-logo.png"></v-img>
+
+      <v-img class="d-flex justify-center align-center" height="50" src="@/assets/img/fuzay-logo.png"></v-img>
 
 
 
@@ -60,5 +54,6 @@ const items = [
 <style scoped>
 a {
   text-decoration: none;
+  text-decoration-color: primary;
 }
 </style>
