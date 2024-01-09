@@ -10,7 +10,7 @@
     </div>
     <div class="pa-5">
       <v-divider></v-divider>
-      <div class="mt-4">
+      <div class="mt-15">
         <Numbers />
       </div>
       <div class="ma-5 mt-15">

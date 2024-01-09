@@ -1,27 +1,28 @@
 <template>
-    <v-card class="mx-auto mt-20 bg-transparent" elevation="0">
-
-        <v-container fluid>
-            <v-row dense>
-                <v-col v-for="card in cards" :key="card.title" :cols="card.flex" sm="6" md="6" lg="6" xl="6" xxl="6">
+    <v-card class="mx-auto mt-20 bg-transparent">
+        <v-container fluid style="max-width: 1200px;">
+            <v-row dense class="d-flex justify-center">
+                <v-col v-for="card in cards" :key="card.title" :cols="12" sm="5" md="4">
                     <v-hover v-slot="{ isHovering, props }">
-                        <v-card id="v-card-skill" :elevation="isHovering ? 12 : 2" :class="{ 'on-hover': isHovering }"
-                            v-bind="props">
-                            <v-img :src="card.src" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)" cover>
-                                <div style="height: 100%;">
-                                    <v-card-title style="white-space: pre-wrap" class="text-white">{{ card.title
-                                    }}</v-card-title>
-                                    <v-spacer></v-spacer>
-                                    <v-card-subtitle style="white-space: pre-wrap" class="text-white">{{ card.subtitle
-                                    }}</v-card-subtitle>
-                                </div>
-                                <div class="mt-n12">
-                                    <v-card-actions>
-                                        <v-spacer></v-spacer>
-                                        <v-btn size="small" color="surface-variant" variant="text" text="Read More"></v-btn>
-                                    </v-card-actions>
-                                </div>
-                            </v-img>
+                        <v-card id="feature" variant="tonal" :elevation="isHovering ? 12 : 2"
+                            :class="{ 'on-hover': isHovering }" v-bind="props">
+                            <div class="d-flex justify-center align-center" style="height: 30%;">
+                                <v-avatar :image="card.src" gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)" cover
+                                    size="60">
+                                </v-avatar>
+                            </div>
+                            <div class="mx-3 d-flex justify-center align-center" style="height: 40%;">
+                                <v-row no-gutters>
+                                    <v-col cols="12">
+                                        <h4 style="white-space: pre-wrap" class="text-white" >
+                                    {{ card.title }}</h4>
+                                    </v-col>
+                                    <v-col cols="12">
+                                        <h7 style="white-space: pre-wrap" class="text-white">
+                                    {{ card.subtitle }}</h7>
+                                    </v-col>
+                                </v-row>
+                            </div>
                         </v-card>
                     </v-hover>
                 </v-col>
@@ -31,32 +32,45 @@
 </template>
 
 <script>
+import SkillDesktop from '@/assets/img/skill-desktop.png';
+import SkillWeb from '@/assets/img/skill-web.png';
+import SkillUX from '@/assets/img/skill-ux.png';
+import SkillFast from '@/assets/img/skill-fast-response.png';
+import SkillBranding from '@/assets/img/skill-branding.png';
+import SkillAdapt from '@/assets/img/skill-adapt.png';
+
 export default {
     data: () => ({
         cards: [
             {
-                title: 'Profissionalismo e Dedicação',
-                subtitle: 'Profissionalismo e Dedicação',
-                src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg',
-                flex: 12
+                title: 'Sistemas Desktop',
+                subtitle: 'Totalmente Personalizados',
+                src: SkillDesktop,
             },
             {
-                title: 'Design Personalizado',
-                subtitle: 'Design Personalizado',
-                src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg',
-                flex: 12
+                title: 'Web Design',
+                subtitle: 'Páginas Responsivas e Intuitivas',
+                src: SkillWeb,
             },
             {
-                title: 'Foco em Resolução',
-                subtitle: 'Foco em Resolução',
-                src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg',
-                flex: 12
+                title: 'Experiência do Usuário',
+                subtitle: 'Foco na satisfação do usuário final',
+                src: SkillUX,
             },
             {
-                title: 'Suporte Continuado',
+                title: 'Agilidade nas Respostas',
                 subtitle: 'Suporte Continuado',
-                src: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-                flex: 12
+                src: SkillFast,
+            },
+            {
+                title: 'Branding',
+                subtitle: 'Contribuição para ideias e ações',
+                src: SkillBranding,
+            },
+            {
+                title: 'Flexibilidade',
+                subtitle: 'Adaptabilidade de projetos e ideias',
+                src: SkillAdapt,
             },
         ],
         transparent: 'rgba(255, 255, 255, 0)',
@@ -65,11 +79,26 @@ export default {
 </script>
 
 <style scoped>
-.v-card-skill {
-    transition: transform .4s ease-in-out;
+#feature {
+    min-height: 200px;
+    min-width: 150px;
+
+    /* Exibição como flexbox com direção de coluna */
+    display: flex;
+    flex-direction: column;
+    /* Altura e largura preenchendo o espaço disponível */
+    height: 100%;
+    width: 100%;
+    /* Alinhamento vertical e horizontal no centro */
+    justify-content: center;
+    align-items: center;
+    /* Cor do texto branca */
+    color: white;
+
+    text-align: center;
 }
 
 .v-card .on-hover {
-    transform: scale(1.005);
+    transform: scale(1.01);
 }
 </style>

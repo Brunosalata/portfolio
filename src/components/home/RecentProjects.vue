@@ -1,8 +1,8 @@
 <template>
     <v-row>
       <v-col v-for="(item, index) in items" :key="index">
-        <v-card class="mx-auto" max-width="344">
-          <v-img :src="item.image" height="200px" cover></v-img>
+        <v-card class="mx-auto" max-width="450" variant="tonal">
+          <v-img :src="item.image" :lazy-src="item.image" height="200px" cover></v-img>
   
           <v-card-title>
             {{ item.title }}
@@ -45,7 +45,7 @@
             title: 'Controle Integrado de Contas',
             subtitle: 'Gestão Financeira',
             content:
-              "I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.",
+              "O projeto de controle integrado de contas foi uma iniciativa baseada em Java e JavaFX, com ênfase na gestão abrangente de contas. Utilizando a robustez do Java, desenvolvemos uma aplicação que permite o gerenciamento eficaz de informações financeiras de forma integrada. O uso do banco de dados SQLite oferece a escalabilidade necessária, enquanto a interface responsiva proporciona uma experiência de usuário otimizada em diferentes tamanhos de tela.",
             show: false,
           },
           {
@@ -53,7 +53,7 @@
             title: 'Interface de Controle',
             subtitle: 'Sistema de Automação',
             content:
-              "I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.",
+              "O sistema de automação para máquinas de ensaio de materiais foi uma solução criada com Java e JavaFX, visando simplificar, aprimorar e modernizar os processos de controle. Desenvolvemos uma interface intuitiva que permite aos usuários controlar e monitorar eficientemente máquinas de ensaio, seus parâmetros e acessar histórico de ensaios. A utilização do Java e JavaFX proporcionou um ambiente de desenvolvimento robusto e eficiente para garantir a precisão e segurança no manuseio de dados e operações de controle.",
             show: false,
           },
           {
@@ -61,7 +61,7 @@
             title: 'Portfolio Fotográfico',
             subtitle: 'Website de Serviços',
             content:
-              "I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.",
+              "O desenvolvimento do portfolio de trabalho fotográfico foi concebido com tecnologias modernas, utilizando Vue.js e Vuetify 3. Criamos uma plataforma web visualmente atraente e funcional para exibir trabalhos fotográficos de forma elegante. A combinação do Vue.js e Vuetify 3 permitiu a criação de uma interface interativa, responsiva e de alto desempenho, oferecendo uma experiência imersiva aos visitantes para explorar e apreciar o trabalho fotográfico apresentado.",
             show: false,
           },
           // Adicione outros itens aqui com os dados necessários para cada card

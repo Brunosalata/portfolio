@@ -1,7 +1,15 @@
 <template>
     <v-row>
       <v-col v-for="skill in skills" :key="skill.title" cols="12">
-        <h2>{{ skill.title }}</h2>
+        <v-row>
+          <v-col cols="11">
+            <h2>{{ skill.title }}</h2>
+          </v-col>
+          <v-spacer></v-spacer>
+          <v-col cols="1">
+            <h2>{{ skill.value }}</h2>
+          </v-col>
+        </v-row>
         <v-progress-linear :color="skill.color" :model-value="skill.value" :height="12"></v-progress-linear>
       </v-col>
     </v-row>
@@ -19,7 +27,7 @@
         {
           title: 'Aplicação Web com Vue e Vuetify',
           color: 'primary',
-          value: 50
+          value: 60
         },
         {
           title: 'Marketing Digital',

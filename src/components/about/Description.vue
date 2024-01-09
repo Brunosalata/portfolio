@@ -6,7 +6,7 @@
           <v-card variant="flat" style="border-radius: 10%;">
             <v-img cover height="auto"
               style="border-radius: 30%; object-fit: cover; object-position: top; filter:grayscale(10%); z-index: 990;"
-              src="@/assets/img/bruno.jpeg"></v-img>
+              src="@/assets/img/bruno.jpeg" lazy-src="@/assets/img/bruno.jpeg"></v-img>
           </v-card>
         </div>
       </v-col>

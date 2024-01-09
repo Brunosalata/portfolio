@@ -1,5 +1,6 @@
 <template>
-    <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="500">
+    <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+    lazy-src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="500">
         <div class="d-flex flex-column fill-height justify-center align-center text-white">
             <div>
                 <h1 class="text-h4 font-weight-thin mb-4">
@@ -10,7 +11,7 @@
                 </h4>
             </div>
             <router-link to="/contact">
-                <v-btn class="mt-10" variant="outlined" size="large">
+                <v-btn class="mt-10" color="primary" variant="outlined" size="large">
                     Contato
                 </v-btn>
             </router-link>

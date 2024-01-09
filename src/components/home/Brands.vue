@@ -1,12 +1,15 @@
 <template>
-  <v-row class="fill-height d-flex justify-center align-center">
-    <v-col v-for="(tool, i) in tools" :class="['ma-0 mr-5 ml-5 pa-0', selectedClass]" :key="i" cols="3">
-      <v-img :src="tool.src" @click="redirectTo(tool.href)"
-        class="mt-3" max-height="50px"></v-img>
-      <div style="text-align: center;">
-      </div>
-    </v-col>
-  </v-row>
+    <div class="d-flex fill-height align-center justify-center">
+        <v-slide-group v-model="model" show-arrows>
+            <v-slide-group-item v-for="brand in brands" :key="brand">
+                <v-card color="transparent" elevation="0" class="ma-5" height="100" width="150" @click="toggle">
+                    <div class="d-flex fill-height align-center justify-center">
+                        <v-img :src="brand.src" @click="redirectTo(brand.href)" class="mt-3" max-height="50px"></v-img>
+                    </div>
+                </v-card>
+            </v-slide-group-item>
+        </v-slide-group>
+    </div>
 </template>
 
 <script>
@@ -16,7 +19,7 @@ import labicobacClient from '@/assets/img/labicobacClient.png';
 export default {
     data() {
         return {
-            tools: [
+            brands: [
                 {
                     src: biopdiClient,
                     href: 'https://biopdi.com.br'
@@ -26,7 +29,6 @@ export default {
                     href: 'https://labicobac.vercel.app/'
                 },
             ],
-            models: [0, 1] // Um modelo diferente para cada coluna
         };
     },
     methods: {

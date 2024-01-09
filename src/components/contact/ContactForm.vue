@@ -41,31 +41,33 @@
         </v-card>
     </form>
 
-    <v-fade-transition hide-on-leave>
-        <v-card v-if="dialog" append-icon="$close" class="mx-auto" elevation="16" max-width="450" title="Mensagem Enviada">
-            <template v-slot:append>
-                <v-btn icon="$close" variant="text" @click="dialog = !dialog"></v-btn>
-            </template>
+    <div v-if="dialog" class="fade-transition-wrapper">
+        <v-fade-transition hide-on-leave>
+            <v-card append-icon="$close" class="dialog" elevation="16" title="Mensagem Enviada">
+                <template v-slot:append>
+                    <v-btn icon="$close" variant="text" @click="dialog = !dialog"></v-btn>
+                </template>
 
-            <v-divider></v-divider>
+                <v-divider></v-divider>
 
-            <div class="py-10 text-center">
-                <v-icon class="mb-6" color="success" icon="mdi-check-circle-outline" size="100"></v-icon>
+                <div class="pa-5 text-center">
+                    <v-icon class="mb-6" color="success" icon="mdi-check-circle-outline" size="100"></v-icon>
 
-                <div class="text-h5 font-weight-bold">Obrigado pelo contato!</div>
-                <div class="text-h7"><br />Responderemos o mais breve possível.</div>
-            </div>
+                    <div class="text-h5 font-weight-bold">Obrigado pelo contato!</div>
+                    <div class="text-h7"><br />Responderemos o mais breve possível.</div>
+                </div>
 
-            <v-divider></v-divider>
+                <v-divider></v-divider>
 
-            <div class="pa-4 text-end">
-                <v-btn class="text-none" color="medium-emphasis" min-width="92" variant="outlined"
-                    @click="dialog = !dialog">
-                    Fechar
-                </v-btn>
-            </div>
-        </v-card>
-    </v-fade-transition>
+                <div class="pa-4 text-end">
+                    <v-btn class="text-none" color="medium-emphasis" min-width="92" variant="outlined"
+                        @click="dialog = !dialog">
+                        Fechar
+                    </v-btn>
+                </div>
+            </v-card>
+        </v-fade-transition>
+    </div>
 </template>
   
 <script setup>
@@ -166,6 +168,14 @@ function handleReset() {
             value: '',
             errorMessage: ''
         },
+        checkbox: {
+            value: '',
+            errorMessage: ''
+        },
+        message: {
+            value: '',
+            errorMessage: ''
+        },
     }
 }
 
@@ -173,10 +183,20 @@ const dialog = ref(false)
 </script>
 
 <style scoped>
-.v-fade-transition {
-    position: 'fixed';
-    top: '50%';
-    left: '50%';
-    transform: 'translate(-50%, -50%)';
+.fade-transition-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Cor do fundo para visualização */
+}
+
+.dialog {
+    min-width: auto;
 }
 </style>

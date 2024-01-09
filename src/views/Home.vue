@@ -2,38 +2,42 @@
   <div>
     <Banner />
   </div>
-  <div class="pa-5 pt-0">
-    <div class="pt-15 pb-15">
-      <div class="d-flex flex-column fill-height justify-center align-center text-white mt-n5">
-      <h1 class="text-h4 font-weight-thin mb-10">
-        Quem Aprova
+
+  <div class="parallax-div mx-0">
+    <div class="mt-15 parallax-div">
+      <h1 class="text-h3 font-weight-thin mb-4">
+        Meus Objetivos
       </h1>
+      <h4 class="mb-15 subheading">
+        Conheça o Desenvolvedor por Trás dos Projetos Digitais
+      </h4>
     </div>
-      <Brands />
-    </div>
- 
   </div>
+  <v-parallax class="px-10" src="@/assets/img/banner2-bg.jpg" cover style="max-height: 600px;">
+    <AboutUs />
+  </v-parallax>
+
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
-    <div class="d-flex flex-column fill-height justify-center align-center text-white">
+    <div class="parallax-div">
       <h1 class="text-h4 font-weight-thin mb-4">
-        Qualidade
+        Meus Serviços
       </h1>
       <h4 class="subheading">
-        Porque se desenvolver com a gente
+        Porque se desenvolver comigo
       </h4>
     </div>
   </v-parallax>
-  <div class="bg-grey-darken-4 d-flex justify-center align-center">
+  <div class="d-flex justify-center align-center">
     <div style="padding-top: 80px; width: 90%;">
       <div class="pt-0 pb-15">
         <Skills />
       </div>
       <v-divider></v-divider>
-      
+
     </div>
   </div>
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
-    <div class="d-flex flex-column fill-height justify-center align-center text-white">
+    <div class="parallax-div">
       <h1 class="text-h4 font-weight-thin mb-4">
         Tecnologias
       </h1>
@@ -46,7 +50,7 @@
     <ToolsLine />
   </div>
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
-    <div class="d-flex flex-column fill-height justify-center align-center text-white">
+    <div class="parallax-div">
       <h1 class="text-h4 font-weight-thin mb-4">
         Projetos
       </h1>
@@ -56,15 +60,20 @@
     </div>
   </v-parallax>
 
-  <div class="bg-grey-darken-4 d-flex justify-center align-center">
+  <div class="d-flex justify-center align-center">
     <div style="padding-top: 80px; width: 90%;">
-      <div class="pt-0 pb-15">
+      <div class="pt-0 pb-0">
         <RecentProjects />
+      </div>
+      <div class="pt-15">
+        <v-divider></v-divider>
+      </div>
+      <div class="pt-0 pb-5">
+        <Brands />
       </div>
     </div>
   </div>
-
-<CallAction />
+  <CallAction />
 </template>
 
 <script lang="ts" setup>
@@ -74,4 +83,23 @@ import Skills from '@/components/home/Skills.vue';
 import ToolsLine from '@/components/home/ToolsLine.vue';
 import RecentProjects from '@/components/home/RecentProjects.vue';
 import CallAction from '@/components/home/CallAction.vue';
+import AboutUs from '@/components/home/AboutUs.vue';
 </script>
+
+<style scoped>
+.parallax-div {
+  /* Margin horizontal de 10 unidades */
+  margin-left: 10px;
+  margin-right: 10px;
+  /* Exibição como flexbox com direção de coluna */
+  display: flex;
+  flex-direction: column;
+  /* Altura e largura preenchendo o espaço disponível */
+  height: 100%;
+  width: 100%;
+  /* Alinhamento vertical e horizontal no centro */
+  justify-content: center;
+  align-items: center;
+
+}
+</style>

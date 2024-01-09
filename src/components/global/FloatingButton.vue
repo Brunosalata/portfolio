@@ -23,7 +23,7 @@ export default {
 <style scoped>
 .side-tab {
   position: fixed;
-  top: 95%;
+  top: 90%;
   right: 0;
   transform: translateY(-50%);
   padding: 10px;
