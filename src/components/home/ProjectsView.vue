@@ -7,32 +7,32 @@
     </div>
     <v-card elevation="0">
       <v-tabs v-model="tab" color="primary" align-tabs="center">
-        <v-tab :value="0">All</v-tab>
+        <v-tab :value="0">Todos</v-tab>
         <v-tab :value="1">Softwares</v-tab>
         <v-tab :value="2">Desenvolvimento Web</v-tab>
         <v-tab :value="3">Branding</v-tab>
       </v-tabs>
       <div class="projects-div">
-      <div class="pa-5" style="max-width: 1200px;">
-        <v-divider class="mb-5"></v-divider>
-        <v-window v-model="tab">
-          <v-window-item v-for="n in 4" :key="n" :value="n - 1">
-            <v-container fluid>
-              <v-row class="flex">
-                <v-col v-for="project in getProjectsByCategory(n - 1)" :key="project.id" cols="12" sm="6" md="4">
-                  <v-card height="auto" variant="text">
-                    <v-img :src="project.img" :lazy-src="project.img" cover></v-img>
-                    <v-card-title>{{ project.title }}</v-card-title>
-                    <v-card-subtitle>{{ project.subtitle }}</v-card-subtitle>
-                    <v-card-text height="200" style="overflow-y: auto;">{{ project.text }}</v-card-text>
-                  </v-card>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-window-item>
-        </v-window>
+        <div class="pa-5" style="max-width: 1200px;">
+          <v-divider class="mb-5"></v-divider>
+          <v-window v-model="tab">
+            <v-window-item v-for="n in 4" :key="n" :value="n - 1">
+              <v-container fluid>
+                <v-row class="flex">
+                  <v-col v-for="project in getProjectsByCategory(n - 1)" :key="project.id" cols="12" sm="6" md="4">
+                    <v-card height="auto" variant="text">
+                      <v-img :src="project.img" :lazy-src="project.img" cover></v-img>
+                      <v-card-title>{{ project.title }}</v-card-title>
+                      <v-card-subtitle>{{ project.subtitle }}</v-card-subtitle>
+                      <v-card-text height="200" style="overflow-y: auto;">{{ project.text }}</v-card-text>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-window-item>
+          </v-window>
+        </div>
       </div>
-    </div>
     </v-card>
   </div>
 </template>
@@ -48,6 +48,7 @@ import singlePageWeb from '@/assets/img/singlePageWeb.jpg';
 import multiPageWeb from '@/assets/img/multiPageWeb.png';
 import landingPageWeb from '@/assets/img/landingPageWeb.png';
 import AutomationProj from '@/assets/img/automation-project.jpg';
+import BrandingProj from '@/assets/img/branding-project.jpg';
 
 export default {
   data: () => ({
@@ -135,6 +136,15 @@ export default {
         subtitle: "Otimizada para Conversão",
         text: "Página otimizada para ações de Marketing, com foco em destacar ofertas ou serviços para atrair leads qualificados. Uma estratégia eficaz para impulsionar os resultados online com uma página direcionada para converter visitantes em clientes."
       },
+      // Branding Projects
+      {
+        id: 201,
+        category: 3,
+        img: BrandingProj,
+        title: "Branding Personalizado",
+        subtitle: "Destaque da Identidade",
+        text: "O branding é a representação visual e emocional da sua marca. Desenvolvemos estratégias visuais e narrativas para criar uma identidade única que se destaque no mercado. Desde o logotipo e paleta de cores até a voz e mensagem da marca, criamos uma conexão genuína com seu público-alvo, destacando seus valores e diferenciando sua marca da concorrência."
+      },
     ],
   }),
   methods: {
@@ -156,7 +166,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
+
 .v-img {
   border-radius: 1%;
 }

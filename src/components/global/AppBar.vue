@@ -58,18 +58,17 @@ export default {
           to: "/"
         },
         {
-          text: 'About',
-
+          text: 'Sobre',
           icon: 'mdi-account-multiple',
           to: "/about"
         },
         {
-          text: 'Projects',
+          text: 'Projetos',
           icon: 'mdi-arrow-all',
           to: "/projects"
         },
         {
-          text: 'Contact',
+          text: 'Contato',
           icon: 'mdi-chat-outline',
           to: "/contact"
         },

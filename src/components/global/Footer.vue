@@ -24,9 +24,9 @@
 
 const items = [
   { text: 'Home', to: "/" },
-  { text: 'About', to: "/about" },
-  { text: 'Projects', to: "/projects" },
-  { text: 'Contact',  to: "/contact" },
+  { text: 'Sobre', to: "/about" },
+  { text: 'Projetos', to: "/projects" },
+  { text: 'Contato',  to: "/contact" },
 ];
 
 </script>
