@@ -1,5 +1,6 @@
 <template>
-    <v-row class="fill-height d-flex justify-center align-center">
+    <div class="d-flex justify-center align-center">
+    <v-row class="fill-height d-flex justify-center align-center" style="max-width: 1200px;">
       <v-col v-for="n in 3" :key="n" cols="4">
         <v-carousel v-model="models[n - 1]" cycle hide-delimiters :show-arrows="false"
                     :interval="2000" height="150">
@@ -14,6 +15,7 @@
         </v-carousel>
       </v-col>
     </v-row>
+</div>
   </template>
 
 <script>

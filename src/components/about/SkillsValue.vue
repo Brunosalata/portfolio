@@ -2,12 +2,12 @@
     <v-row>
       <v-col v-for="skill in skills" :key="skill.title" cols="12">
         <v-row>
-          <v-col cols="11">
+          <v-col cols="10" sm="11">
             <h2>{{ skill.title }}</h2>
           </v-col>
           <v-spacer></v-spacer>
-          <v-col cols="1">
-            <h2>{{ skill.value }}</h2>
+          <v-col cols="2" sm="1" class="d-flex flex-column justify-center align-center">
+            <h3>{{ skill.value }}%</h3>
           </v-col>
         </v-row>
         <v-progress-linear :color="skill.color" :model-value="skill.value" :height="12"></v-progress-linear>

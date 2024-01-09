@@ -1,6 +1,6 @@
 <template>
     <v-parallax src="@/assets/img/banner-bg.jpg" lazy-src="@/assets/img/banner-bg.jpg" cover height="100dvh" class="parallax-container">
-        <div class="overlay d-flex flex-column justify-center align-center text-white">
+        <div class="px-5 overlay d-flex flex-column justify-center align-center text-white">
             <h1 class="text-h2 font-weight-thin mb-4">
                 <v-carousel cycle hide-delimiters :show-arrows="false" height="65" fade-transition interval="2000">
                     <v-carousel-item v-for="(slide, i) in slides" :key="i" transition="scale-transition">

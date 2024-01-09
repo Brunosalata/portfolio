@@ -4,18 +4,20 @@
   </div>
 
   <div class="parallax-div mx-0">
-    <div class="mt-15 parallax-div">
+    <div class="mt-15 mb-15 parallax-div px-5">
       <h1 class="text-h3 font-weight-thin mb-4">
         Meus Objetivos
       </h1>
-      <h4 class="mb-15 subheading">
+      <h4 class="subheading">
         Conheça o Desenvolvedor por Trás dos Projetos Digitais
       </h4>
     </div>
   </div>
-  <v-parallax class="px-10" src="@/assets/img/banner2-bg.jpg" cover style="max-height: 600px;">
-    <AboutUs />
-  </v-parallax>
+  <div class="d-flex justify-center align-center">
+    <v-parallax src="@/assets/img/banner2-bg.jpg" class="about-parallax" cover>
+      <AboutUs />
+    </v-parallax>
+  </div>
 
   <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="200">
     <div class="parallax-div">
@@ -62,7 +64,7 @@
 
   <div class="d-flex justify-center align-center">
     <div style="padding-top: 80px; width: 90%;">
-      <div class="pt-0 pb-0">
+      <div class="justify-center align-center">
         <RecentProjects />
       </div>
       <div class="pt-15">
@@ -73,7 +75,7 @@
       </div>
     </div>
   </div>
-  <CallAction />
+  <CallAction class="px-5" />
 </template>
 
 <script lang="ts" setup>
@@ -101,5 +103,15 @@ import AboutUs from '@/components/home/AboutUs.vue';
   justify-content: center;
   align-items: center;
 
+  text-align: center;
+
+}
+.about-parallax{
+  max-height: auto;
+}
+@media screen and (min-width: 960px) {
+  .about-parallax{
+  max-height: 600px;
+}
 }
 </style>

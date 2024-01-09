@@ -1,16 +1,12 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col cols="12" md="6" class="pa-3 my-auto" height="400px" style="vertical-align: middle;">
-        <div class="pa-5">
-          <v-card variant="flat" style="border-radius: 10%;">
-            <v-img cover height="auto"
-              style="border-radius: 30%; object-fit: cover; object-position: top; filter:grayscale(10%); z-index: 990;"
-              src="@/assets/img/bruno.jpeg" lazy-src="@/assets/img/bruno.jpeg"></v-img>
-          </v-card>
+  <v-container style="max-width: 1200px;">
+    <v-row class="align-center">
+      <v-col cols="12" md="6" class="d-flex justify-center align-center">
+        <div class="image-container">
+          <v-img class="image" src="@/assets/img/bruno.jpeg" lazy-src="@/assets/img/bruno.jpeg"></v-img>
         </div>
       </v-col>
-      <v-col cols="12" md="6" class="pa-3 my-auto" style="vertical-align: middle;">
+      <v-col cols="12" md="6">
         <v-card class="pt-3 bg-transparent" elevation="0">
           <v-card-title style="white-space: pre-wrap" class="text-h4 text-yellow-darken-1">Bruno Salata
             Lima</v-card-title>
@@ -36,3 +32,20 @@
 <script setup>
 
 </script>
+
+<style scoped>
+.image-container {
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  border-radius: 10%;
+  object-fit: contain; /* Mantém a proporção, ajustando ao espaço disponível */
+}
+</style>
