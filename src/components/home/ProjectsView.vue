@@ -45,7 +45,7 @@ import FinanceProj from '@/assets/img/finance-project.jpg';
 import UniversityProj from '@/assets/img/university-project.jpg';
 import SelfEmployedProj from '@/assets/img/selfEmployed-project.jpg';
 import singlePageWeb from '@/assets/img/singlePageWeb.jpg';
-import multiPageWeb from '@/assets/img/multiPageWeb.png';
+import multiPageWeb from '@/assets/img/multiPageWeb.jpg';
 import landingPageWeb from '@/assets/img/landingPageWeb.png';
 import AutomationProj from '@/assets/img/automation-project.jpg';
 import BrandingProj from '@/assets/img/branding-project.jpg';
