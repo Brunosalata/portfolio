@@ -1,6 +1,6 @@
 <template>
-  <v-container style="max-width: 1200px;">
-    <v-row class="align-center">
+  <v-container style="max-width: 1000px;">
+    <v-row class="align-center" no-gutters>
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <div class="image-container">
           <v-img class="image" src="@/assets/img/bruno.jpeg" lazy-src="@/assets/img/bruno.jpeg"></v-img>
@@ -22,7 +22,6 @@
             de soluções digitais vai além do código. Busco entender profundamente as necessidades dos
             usuários, explorando o campo do marketing, UX e UI para criar interfaces que não apenas
             funcionem bem, mas também encantem.</v-card-text>
-          <v-card-text style="text-align: right;">BSL</v-card-text>
         </v-card>
       </v-col>
     </v-row>

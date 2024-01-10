@@ -11,7 +11,7 @@
               <div class="parallax-div">
                 <v-card-title>Bruno Salata Lima</v-card-title>
                 <v-divider class="mb-2" width="100"></v-divider>
-                <v-card-subtitle>Bruno Salata Lima</v-card-subtitle>
+                <v-card-subtitle>Desenvolvedor Full Stack</v-card-subtitle>
                 <v-spacer></v-spacer>
                 <v-card-actions class="pa-3">
                   <v-spacer></v-spacer>
@@ -26,9 +26,9 @@
         <v-col cols="12" md="6">
           <v-card class="pa-10 bg-transparent" variant="text" elevation="0">
             <div class="parallax-div">
-              <v-card-title>Sejam bem-vindos!</v-card-title>
+              <v-card-title class="text-h5">SEJAM BEM-VINDOS!</v-card-title>
               <v-divider class="mb-2" width="100"></v-divider>
-              <p class="text-caption text-justify">
+              <p class="text-caption text-center">
                 Meu percurso na tecnologia é marcado por uma busca contínua de aprendizado e
                 evolução. Com dedicação às linguagens como Java, Vue.js e Vuetify,
                 tenho como objetivo me apeifeiçoar a cada dia para a criação de sistemas
