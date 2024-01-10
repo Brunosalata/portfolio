@@ -30,12 +30,16 @@
 </template>
   
 <script>
+import automationProj from '@/assets/img/automation-recent-project.jpg';
+import financeProj from '@/assets/img/finance-recent-project.jpg';
+import websiteProj from '@/assets/img/website-recent-project.jpg';
+
 export default {
   data() {
     return {
       items: [
         {
-          image: 'https://cdn.pixabay.com/photo/2016/06/03/13/57/digital-marketing-1433427_1280.jpg',
+          image: financeProj,
           title: 'Integração de Contas',
           subtitle: 'Gestão Financeira',
           content:
@@ -43,7 +47,7 @@ export default {
           show: false,
         },
         {
-          image: 'https://cdn.pixabay.com/photo/2023/07/26/09/26/industry-8150774_1280.jpg',
+          image: automationProj,
           title: 'Interface de Controle',
           subtitle: 'Sistema de Automação',
           content:
@@ -51,7 +55,7 @@ export default {
           show: false,
         },
         {
-          image: 'https://cdn.pixabay.com/photo/2016/11/29/06/17/computer-1867758_1280.jpg',
+          image: websiteProj,
           title: 'Portfolio Fotográfico',
           subtitle: 'Website de Serviços',
           content:

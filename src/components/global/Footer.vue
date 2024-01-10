@@ -1,5 +1,4 @@
 <template>
-    <v-divider></v-divider>
     <v-footer class="mb-1 bg-transparent">
       <v-row justify="center" no-gutters>
         <v-btn
