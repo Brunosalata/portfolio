@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="submitForm" action="https://formsubmit.co/brunoslima@gmail.com" method="POST">
+    <form @submit.prevent="submitForm" action="https://api.staticforms.xyz/submit" method="POST">
         <v-card class="pa-5" variant="outlined" elevation="8">
             <v-row>
                 <v-col cols="12" sm="6">
@@ -39,6 +39,9 @@
                 </v-col>
             </v-row>
         </v-card>
+        <input type="hidden" name="accessKey" value="4450dead-a42f-4427-bf72-6319b5393ac2">
+        <input type="hidden" name="redirectTo" value="https://www.brunosalata.com.br">
+        <input type="text" name="honeypot" style="display: none;">
     </form>
 
     <div v-if="dialog" class="fade-transition-wrapper">
@@ -71,7 +74,7 @@
 </template>
   
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 const fields = ref({
     name: {
@@ -143,6 +146,7 @@ function submitForm() {
     if (!hasErrors) {
         document.querySelector('form').submit()
         handleSend()
+        handleReset()
     }
 }
 
